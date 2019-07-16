@@ -1,0 +1,16 @@
+{
+  "name": "electest",
+  "version": "1.0.0",
+  "description": "Testing the electron set up",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.7",
+    "require": "^2.4.20",
+    "requirejs": "^2.3.6"
+  }
+}

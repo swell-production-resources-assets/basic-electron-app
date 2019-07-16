@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ElectronTest</title>
+</head>
+<body>
+  <h1>Electron Test</h1>
+  <h3>Team</h2>
+  <h4>Amanda, Kajol, Abby, Kwadwo</h4>
+  <div class="container"></div>
+  <div id="outputJS"></div>
+</body>
+<script> 
+  console.log(process);
+  let outputStuff = `<h3> Your current version of node is ${process.versions.node}</h3>
+  <h3> Your current version of electron is ${process.versions.electron}</h3>`;
+  document.querySelector('#outputJS').innerHTML = outputStuff
+</script><!--process is a huge ass object that has ALOT of stuff available to lok at... like your system specs for example/ Here we are inserting js content into the div with the id of outputJS -->
+
+<!-- <script> console.log("Iss a partyyyy")</script> -->
+<!-- Here is where you require the renderer file which doesnt do any thing just yet -->
+  <script>
+    require('./renderer.js');
+  </script>
+</html>
