@@ -6,6 +6,7 @@ const url = require('url');
 //if we dont create this the windw will be closed immediately when js file is garbage collected
 
 let win;
+let secondWin;
 
 function createWindow(){
   win = new BrowserWindow({
@@ -14,6 +15,14 @@ function createWindow(){
     webPreferences: {//this lets us run node in our html file. without this i cant use 'require' in html
       nodeIntegration: true
     }
+  })
+  secondWin = new BrowserWindow({
+    width:300,
+    height:300,
+    maxWidth:300,
+    maxHeight:300,
+    backgroundColor: '#348b22',
+    frame:false,
   })
 //here we load up the html page
   win.loadURL(url.format({
